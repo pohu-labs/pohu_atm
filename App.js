@@ -19,29 +19,32 @@ import Calender from './component/calender/Calender';
 import HomeWork from './task/homewrk';
 import TaskProfile from './task/taskprofile';
 import TaskCreated from './task/TaskCreated';
+import StudentProfile from './Parent App/studentprofile';
 
-const Stack=createNativeStackNavigator();
-const  App=() => {
+const Stack = createNativeStackNavigator();
+const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen name="work" component={HomeWork} options={{headerShown:false}}/> */}
-        <Stack.Screen name="login" component={LoginScreen} options={{ headerShown: false }}/>
-        <Stack.Screen name="home" component={MainScreen} options={{ headerShown: false }}/>
-        <Stack.Screen name="task" component={ViewTask} options={{ headerShown: false }}/>
+
+        <Stack.Screen name="studentprofile" component={StudentProfile} options={{ headerShown: false }} />
+        <Stack.Screen name="work" component={HomeWork} options={{ headerShown: false }} />
+        <Stack.Screen name="login" component={LoginScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="home" component={MainScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="task" component={ViewTask} options={{ headerShown: false }} />
         <Stack.Screen name="task-update" component={TaskScreen} />
-        <Stack.Screen name="footer" component={FooterComponent} options={{ headerShown: false }}/>
-        <Stack.Screen name="home_work" component={HomeWorkComponent} options={{ headerShown: false }}/>
-        <Stack.Screen name="sidebar" component={Sidebar} options={{ headerShown: false }}/>
-        <Stack.Screen name="qr-scanner" component={ScannerComponent} options={{ headerShown: false }}/>
-        <Stack.Screen name="attendance-t" component={TakeAttendanceComponent} options={{ headerShown: false }}/>
-        <Stack.Screen name="attendance-s" component={StudentAttendanceComponent} options={{ headerShown: false }}/>
-        <Stack.Screen name="meetings" component={Calender} options={{ headerShown: false }}/>
-        <Stack.Screen name="parent-home" component={ParentScreen} options={{ headerShown: false }}/>
-        <Stack.Screen name="task-create" component={TaskCreated} options={{headerShown:false}}/>
-        <Stack.Screen name="task-profile" component={TaskProfile} options={{headerShown:false}}/>
+        <Stack.Screen name="footer" component={FooterComponent} options={{ headerShown: false }} />
+        <Stack.Screen name="home_work" component={HomeWorkComponent} options={{ headerShown: false }} />
+        <Stack.Screen name="sidebar" component={Sidebar} options={{ headerShown: false }} />
+        <Stack.Screen name="qr-scanner" component={ScannerComponent} options={{ headerShown: false }} />
+        <Stack.Screen name="attendance-t" component={TakeAttendanceComponent} options={{ headerShown: false }} />
+        <Stack.Screen name="attendance-s" component={StudentAttendanceComponent} options={{ headerShown: false }} />
+        <Stack.Screen name="meetings" component={Calender} options={{ headerShown: false }} />
+        <Stack.Screen name="parent-home" component={ParentScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="task-create" component={TaskCreated} options={{ headerShown: false }} />
+        <Stack.Screen name="task-profile" component={TaskProfile} options={{ headerShown: false }} />
       </Stack.Navigator>
-    </NavigationContainer>   
+    </NavigationContainer>
   );
 }
 
